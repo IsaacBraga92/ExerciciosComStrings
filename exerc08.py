@@ -13,7 +13,7 @@ def normalizar_frase(s):
     return re.sub('[^a-zA-Z0-9]+', '', normalize('NFKD', s).encode('ASCII', 'ignore').decode('ASCII')).lower()
 
 
-frase = 'E até o Papa poeta é'.replace(' ', '').lower()
+frase = input("Digite uma palavra: ").replace(' ', '').lower()
 frase = normalizar_frase(frase)
 inverter = frase[::-1]
 print(frase)
